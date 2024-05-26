@@ -3,8 +3,8 @@ package nakamacluster
 import (
 	"time"
 
-	"github.com/doublemo/nakama-cluster/api"
-	"github.com/doublemo/nakama-cluster/endpoint"
+	"github.com/hamdiovish/nakama-cluster/api"
+	"github.com/hamdiovish/nakama-cluster/endpoint"
 	"github.com/hashicorp/memberlist"
 	"go.uber.org/zap"
 	"google.golang.org/protobuf/proto"

@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/doublemo/nakama-cluster/endpoint"
+	"github.com/hamdiovish/nakama-cluster/endpoint"
 	"go.uber.org/zap"
 )
 

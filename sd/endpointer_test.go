@@ -5,9 +5,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/doublemo/nakama-cluster/endpoint"
-	"github.com/doublemo/nakama-cluster/sd"
-	"github.com/doublemo/nakama-cluster/sd/internal/instance"
+	"github.com/hamdiovish/nakama-cluster/endpoint"
+	"github.com/hamdiovish/nakama-cluster/sd"
+	"github.com/hamdiovish/nakama-cluster/sd/internal/instance"
 	"go.uber.org/zap"
 )
 

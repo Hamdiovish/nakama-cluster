@@ -3,8 +3,8 @@ package lb
 import (
 	"sync/atomic"
 
-	"github.com/doublemo/nakama-cluster/endpoint"
-	"github.com/doublemo/nakama-cluster/sd"
+	"github.com/hamdiovish/nakama-cluster/endpoint"
+	"github.com/hamdiovish/nakama-cluster/sd"
 )
 
 // NewRoundRobin returns a load balancer that returns services in sequence.

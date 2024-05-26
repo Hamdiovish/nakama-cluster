@@ -3,7 +3,7 @@ package sd
 import (
 	"io"
 
-	"github.com/doublemo/nakama-cluster/endpoint"
+	"github.com/hamdiovish/nakama-cluster/endpoint"
 )
 
 // Factory is a function that converts an instance string (e.g. host:port) to a

@@ -3,7 +3,7 @@ package lb
 import (
 	"errors"
 
-	"github.com/doublemo/nakama-cluster/endpoint"
+	"github.com/hamdiovish/nakama-cluster/endpoint"
 )
 
 // Balancer yields endpoints according to some heuristic.

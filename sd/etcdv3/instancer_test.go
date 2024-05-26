@@ -4,7 +4,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/doublemo/nakama-cluster/sd"
+	"github.com/hamdiovish/nakama-cluster/sd"
 	"go.uber.org/zap"
 )
 

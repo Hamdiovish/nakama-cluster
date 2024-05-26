@@ -3,8 +3,8 @@ package lb
 import (
 	"math/rand"
 
-	"github.com/doublemo/nakama-cluster/endpoint"
-	"github.com/doublemo/nakama-cluster/sd"
+	"github.com/hamdiovish/nakama-cluster/endpoint"
+	"github.com/hamdiovish/nakama-cluster/sd"
 )
 
 // NewRandom returns a load balancer that selects services randomly.

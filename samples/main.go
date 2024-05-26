@@ -12,10 +12,10 @@ import (
 	"syscall"
 	"time"
 
-	nakamacluster "github.com/doublemo/nakama-cluster"
-	"github.com/doublemo/nakama-cluster/api"
-	"github.com/doublemo/nakama-cluster/endpoint"
-	"github.com/doublemo/nakama-cluster/sd/etcdv3"
+	nakamacluster "github.com/hamdiovish/nakama-cluster"
+	"github.com/hamdiovish/nakama-cluster/api"
+	"github.com/hamdiovish/nakama-cluster/endpoint"
+	"github.com/hamdiovish/nakama-cluster/sd/etcdv3"
 	"github.com/uber-go/tally/v4"
 	"github.com/uber-go/tally/v4/prometheus"
 	"go.uber.org/zap"
@@ -108,12 +108,13 @@ func main() {
 	log := zap.New(core, options...)
 
 	ctx, cancel := context.WithCancel(context.Background())
-	client, err := etcdv3.NewClient(ctx, []string{"192.168.0.71:12379", "192.168.0.71:22379", "192.168.0.71:32379"}, etcdv3.ClientOptions{})
+	client, err := etcdv3.NewClient(ctx, []string{"127.0.0.1:12379", "127.0.0.1:22379", "127.0.0.1:32379", "127.0.0.1:2379"}, etcdv3.ClientOptions{})
 	if err != nil {
 		log.Fatal("连接etcd失败", zap.Error(err))
 	}
 
 	c := nakamacluster.NewConfig()
+	c.Addr = "127.0.0.1"
 	c.Port = 10000 + rand.Intn(10000)
 	c.RetransmitMult = 5
 	c.Prefix = "/nk/samples/"
@@ -140,11 +141,12 @@ func main() {
 	s.OnDelegate(&Delegate{logger: log, conn: s})
 
 	c2 := nakamacluster.NewConfig()
+	c2.Addr = "127.0.0.1"
 	c2.Port = 10000 + rand.Intn(10000)
 	c2.RetransmitMult = 5
 	c2.Prefix = "/nk/samples/"
 	serverId2 := fmt.Sprintf("node-server-%d", rand.Intn(10000))
-	client2, err := etcdv3.NewClient(ctx, []string{"192.168.0.71:12379", "192.168.0.71:22379", "192.168.0.71:32379"}, etcdv3.ClientOptions{})
+	client2, err := etcdv3.NewClient(ctx, []string{"127.0.0.1:12379", "127.0.0.1:22379", "127.0.0.1:32379", "127.0.0.1:2379"}, etcdv3.ClientOptions{})
 	if err != nil {
 		log.Fatal("连接etcd失败", zap.Error(err))
 	}

@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package nakama.cluster;
 
-option go_package = "github.com/doublemo/nakama-cluster/api";
+option go_package = "github.com/hamdiovish/nakama-cluster/api";
 
 
 

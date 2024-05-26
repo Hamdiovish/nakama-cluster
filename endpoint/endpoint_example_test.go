@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/doublemo/nakama-cluster/endpoint"
+	"github.com/hamdiovish/nakama-cluster/endpoint"
 )
 
 func ExampleChain() {

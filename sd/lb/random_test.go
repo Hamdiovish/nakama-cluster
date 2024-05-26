@@ -6,8 +6,8 @@ import (
 	"math"
 	"testing"
 
-	"github.com/doublemo/nakama-cluster/endpoint"
-	"github.com/doublemo/nakama-cluster/sd"
+	"github.com/hamdiovish/nakama-cluster/endpoint"
+	"github.com/hamdiovish/nakama-cluster/sd"
 )
 
 func TestRandom(t *testing.T) {

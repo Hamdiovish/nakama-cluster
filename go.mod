@@ -1,4 +1,4 @@
-module github.com/doublemo/nakama-cluster
+module github.com/hamdiovish/nakama-cluster
 
 go 1.20
 

@@ -93,7 +93,6 @@ github.com/prometheus/procfs/internal/util
 github.com/sean-/seed
 # github.com/serialx/hashring v0.0.0-20200727003509-22c0c7ab6b1b
 ## explicit
-github.com/serialx/hashring
 # github.com/shimingyah/pool v1.0.0
 ## explicit; go 1.12
 github.com/shimingyah/pool

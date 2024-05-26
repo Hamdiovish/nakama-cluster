@@ -9,8 +9,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/doublemo/nakama-cluster/endpoint"
-	"github.com/doublemo/nakama-cluster/sd"
+	"github.com/hamdiovish/nakama-cluster/endpoint"
+	"github.com/hamdiovish/nakama-cluster/sd"
 )
 
 func TestRoundRobin(t *testing.T) {

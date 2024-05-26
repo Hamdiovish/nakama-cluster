@@ -6,7 +6,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/doublemo/nakama-cluster/endpoint"
+	"github.com/hamdiovish/nakama-cluster/endpoint"
 )
 
 // RetryError is an error wrapper that is used by the retry mechanism. All

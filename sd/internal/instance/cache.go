@@ -5,7 +5,7 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/doublemo/nakama-cluster/sd"
+	"github.com/hamdiovish/nakama-cluster/sd"
 )
 
 // Cache keeps track of resource instances provided to it via Update method

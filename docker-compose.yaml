@@ -1,0 +1,33 @@
+version: "3.8"
+
+services:
+  # etcd service (optional, remove if using an external cluster)
+  etcd:
+    image: 'bitnami/etcd:latest'
+    environment:
+      - ALLOW_NONE_AUTHENTICATION=yes
+      - ETCD_ADVERTISE_CLIENT_URLS=http://etcd:2379
+    ports:
+      - 2379:2379
+      - 2380:2380
+
+  # Nakamacluster test application instances
+  # nakama-1:
+  #   image: nakama-cluster:0.0.1 
+  #   ports:
+  #     - "10000-10999:10000-10999"  # Dynamic port allocation for client
+  #     - "30000-30999:30000-30999"  # Dynamic port allocation for Prometheus
+  #   depends_on:
+  #     - etcd
+
+  # nakama-2:
+  #   image: nakama-cluster:0.0.1 
+  #   ports:
+  #     - "11000-11999:10000-10999"  # Dynamic port allocation for client
+  #     - "31000-31999:30000-30999"  # Dynamic port allocation for Prometheus
+  #   depends_on:
+  #     - etcd
+
+# Volume to persist etcd data (optional)
+volumes:
+  etcd-data: {}
