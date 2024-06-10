@@ -8,7 +8,6 @@ require (
 	github.com/hashicorp/go-sockaddr v1.0.0
 	github.com/hashicorp/memberlist v0.4.0
 	github.com/heroiclabs/nakama-common v1.24.0
-	github.com/serialx/hashring v0.0.0-20200727003509-22c0c7ab6b1b
 	github.com/shimingyah/pool v1.0.0
 	github.com/uber-go/tally/v4 v4.1.2
 	go.etcd.io/etcd/client/pkg/v3 v3.5.5
