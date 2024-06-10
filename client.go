@@ -293,3 +293,17 @@ func NewNakaMaEndpoint(id string, vars map[string]string, config Config) (endpoi
 	vars["domian"] = config.Domain
 	return endpoint.New(id, NAKAMA, fmt.Sprintf("%s:%d", addr, config.Port), vars, nil), nil
 }
+
+// Method to get the nodes map
+func (c *Client) GetNodes() map[string]*memberlist.Node {
+	c.Lock()
+	defer c.Unlock()
+
+	// Return a copy of the nodes map to ensure thread-safety
+	nodesCopy := make(map[string]*memberlist.Node, len(c.nodes))
+	for k, v := range c.nodes {
+		nodesCopy[k] = v
+	}
+
+	return nodesCopy
+}
